@@ -6,6 +6,318 @@
     <title>CPIA iHCore Ultra - Sistema de Gestión Inteligente</title>
     <meta name="description" content="Sistema avanzado CPIA iHCore Ultra para gestión integral. Soluciones tecnológicas innovadoras y eficientes para procesos empresariales.">
     <meta name="keywords" content="CPIA, iHCore, sistema gestión, tecnología, software, gestión empresarial, ultra, automatización">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .logo span {
+            background: white;
+            color: #1a2980;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 1.8rem;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 3rem;
+        }
+        
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h2 {
+            color: #1a2980;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card h2 i {
+            font-size: 1.3rem;
+        }
+        
+        .features {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .features h2 {
+            text-align: center;
+            color: #1a2980;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .feature-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #26d0ce;
+        }
+        
+        .keywords {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .keywords h2 {
+            color: #1a2980;
+            margin-bottom: 1.5rem;
+        }
+        
+        .keyword-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .tag {
+            background: #e3f2fd;
+            color: #1a2980;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        
+        .repo-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .repo-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(26, 41, 128, 0.2);
+        }
+        
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #1a2980;
+            border: 2px solid #1a2980;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.95rem;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .logo { font-size: 2rem; }
+            .logo span { font-size: 1.4rem; }
+            .subtitle { font-size: 1.1rem; }
+            .container { padding: 15px; }
+            .card { padding: 1.5rem; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span>CPIA</span> iHCore <span>ULTRA</span>
+            </div>
+            <h1>Sistema de Gestión Inteligente</h1>
+            <p class="subtitle">Plataforma avanzada para optimización de procesos empresariales con tecnología de última generación</p>
+        </header>
+        
+        <section class="features">
+            <h2><i class="fas fa-star"></i> Características Principales</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3><i class="fas fa-bolt"></i> Alto Rendimiento</h3>
+                    <p>Sistema optimizado para máxima velocidad y eficiencia en procesamiento de datos.</p>
+                </div>
+                <div class="feature-item">
+                    <h3><i class="fas fa-shield-alt"></i> Seguridad Avanzada</h3>
+                    <p>Protección de datos con encriptación de nivel empresarial y múltiples capas de seguridad.</p>
+                </div>
+                <div class="feature-item">
+                    <h3><i class="fas fa-sync-alt"></i> Integración Total</h3>
+                    <p>Conectividad con múltiples sistemas y plataformas para un flujo de trabajo unificado.</p>
+                </div>
+                <div class="feature-item">
+                    <h3><i class="fas fa-chart-line"></i> Análisis Inteligente</h3>
+                    <p>Reportes y dashboards en tiempo real con inteligencia artificial predictiva.</p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="main-content">
+            <div class="card">
+                <h2><i class="fas fa-info-circle"></i> Acerca del Proyecto</h2>
+                <p>CPIA iHCore Ultra es un sistema de gestión integral diseñado para optimizar procesos empresariales complejos mediante tecnología innovadora.</p>
+                <p>Combina herramientas de análisis, automatización y gestión en una plataforma unificada.</p>
+            </div>
+            
+            <div class="card">
+                <h2><i class="fas fa-cogs"></i> Tecnologías</h2>
+                <p>Desarrollado con las tecnologías más modernas y eficientes del mercado:</p>
+                <ul style="margin-top: 1rem; padding-left: 1.2rem;">
+                    <li>Arquitectura escalable</li>
+                    <li>Base de datos optimizada</li>
+                    <li>Interfaz responsive</li>
+                    <li>APIs RESTful</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2><i class="fas fa-download"></i> Instalación</h2>
+                <p>Para instalar y configurar el sistema:</p>
+                <ol style="margin-top: 1rem; padding-left: 1.2rem;">
+                    <li>Clonar el repositorio</li>
+                    <li>Instalar dependencias</li>
+                    <li>Configurar variables de entorno</li>
+                    <li>Ejecutar servidor</li>
+                </ol>
+            </div>
+        </div>
+        
+        <section class="keywords">
+            <h2><i class="fas fa-search"></i> Palabras Clave para Búsqueda</h2>
+            <p>Este proyecto aparece en Google cuando buscas:</p>
+            <div class="keyword-tags">
+                <span class="tag">sistema CPIA</span>
+                <span class="tag">iHCore ultra</span>
+                <span class="tag">gestión empresarial</span>
+                <span class="tag">software gestión</span>
+                <span class="tag">automatización procesos</span>
+                <span class="tag">plataforma tecnológica</span>
+                <span class="tag">sistema inteligente</span>
+                <span class="tag">optimización empresarial</span>
+                <span class="tag">CPIA sistema</span>
+                <span class="tag">iHCore software</span>
+            </div>
+        </section>
+        
+        <section class="repo-info">
+            <h2><i class="fab fa-github"></i> Repositorio GitHub</h2>
+            <p>Accede al código fuente y documentación completa del proyecto:</p>
+            <div class="repo-links">
+                <a href="https://github.com/Jhosman9090/CPIA_ihcore_ultra" class="btn" target="_blank">
+                    <i class="fab fa-github"></i> Ver Repositorio
+                </a>
+                <a href="https://github.com/Jhosman9090/CPIA_ihcore_ultra/archive/refs/heads/main.zip" class="btn btn-secondary">
+                    <i class="fas fa-download"></i> Descargar Código
+                </a>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2024 CPIA iHCore Ultra - Sistema de Gestión Inteligente</p>
+            <p style="margin-top: 10px;">Desarrollado con tecnología avanzada | Todos los derechos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.9em; color: #888;">
+                Esta página está optimizada para motores de búsqueda y se actualiza regularmente
+            </p>
+        </footer>
+    </div>
+</body>
+                    </html><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPIA iHCore Ultra - Sistema de Gestión Inteligente</title>
+    <meta name="description" content="Sistema avanzado CPIA iHCore Ultra para gestión integral. Soluciones tecnológicas innovadoras y eficientes para procesos empresariales.">
+    <meta name="keywords" content="CPIA, iHCore, sistema gestión, tecnología, software, gestión empresarial, ultra, automatización">
     <!-- Metadatos para redes sociales -->
     <meta property="og:title" content="CPIA iHCore Ultra - Sistema de Gestión Inteligente">
     <meta property="og:description" content="Plataforma avanzada para optimización de procesos empresariales con tecnología de última generación.">
